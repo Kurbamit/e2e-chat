@@ -45,17 +45,6 @@
 
 ---
 
-## Immediate Next Steps
-
-1. **Add DI to server** (~30 min)
-2. **Fix async/await in client** (~20 min)
-3. **Add ILogger to all classes** (~30 min)
-4. **Create message models** (~45 min)
-
-**Total Time**: ~2 hours for critical improvements
-
----
-
 ## Architecture Decision: When to Scale?
 
 ### Current Architecture (Good for):
