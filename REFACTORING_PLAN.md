@@ -1,33 +1,5 @@
 # Scalability Refactoring Plan
 
-## Priority 1: Infrastructure (Do Now)
-
-### 1.1 Add Dependency Injection to Server
-**File**: `Program.cs`
-```csharp
-builder.Services.AddSingleton<ClientRegistry>();
-builder.Services.AddScoped<MessageRouter>();
-builder.Services.AddScoped<ConnectionHandler>();
-builder.Services.AddLogging();
-```
-**Benefit**: Enables testing, configuration, logging, and future extensions
-
-### 1.2 Fix Client Async/Await Issues
-**File**: `ConsoleUI.cs`
-- Change method signatures to async Task
-- Remove `.Wait()` calls
-- Use proper async patterns
-**Benefit**: Prevents UI freezes and deadlocks
-
-### 1.3 Add Strongly-Typed Message Models
-**Create**: `Models/` folder with:
-- `HelloMessage.cs`
-- `TextMessage.cs`
-- `HandshakeMessage.cs`
-- `ErrorMessage.cs`
-
-**Benefit**: Type safety, easier to extend, better IntelliSense
-
 ---
 
 ## Priority 2: Scalability (Do Soon)
